@@ -93,12 +93,23 @@ function Calculator(){
     // const [display, setDisplay] = React.useState('0');
 
      // useState
+     
  const [calc, setCalc] = React.useState({
     current: '0',
     total: '',
     isInitial: true,
     preOp: ''
  });
+
+ // handle return button
+  function handleClear(){
+    setCalc({
+    current: '0',
+    total: '',
+    isInitial: true,
+    preOp: ''
+    });
+  }
     return(
         <div className="calculator">
             <div className="display">{calc.current}</div>
