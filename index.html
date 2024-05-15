@@ -101,7 +101,7 @@ function Calculator(){
     preOp: ''
  });
 
- // handle return button
+ // handle clear button
   function handleClear(){
     setCalc({
     current: '0',
@@ -110,6 +110,7 @@ function Calculator(){
     preOp: ''
     });
   }
+
     return(
         <div className="calculator">
             <div className="display">{calc.current}</div>
@@ -129,7 +130,7 @@ function Calculator(){
             <CalcButton value="3"onClick={handleNumber}/>
             <CalcButton className="operator" value="+"/>
 
-            <CalcButton value="C"/>
+            <CalcButton value="C"onClick={handleClear}/>
             <CalcButton value="0"onClick={handleNumber}/>
             <CalcButton className="operator" value="="/>
             <CalcButton className="operator" value="-"/>
